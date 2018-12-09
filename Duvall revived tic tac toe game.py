@@ -79,8 +79,9 @@ def drawGrid():
     
     
 #    #-------------------------initialize values-------------------------
-    String value
-    
+    def winconditions:
+        
+        
     
     #decide by random who goes first X or O
     
@@ -93,7 +94,38 @@ def drawGrid():
         drawGrid()
         #enlarge value or X and O and print fill in grid color with blue or 
         #red X or O
-        
+        while (numberOfturns <= 9):
+            if (topLeftGrid && centerLeftGrid && bottomLeftGrid = "X"):
+                print("player X wins")
+                break
+            elif (topLeftGrid && centerLeftGrid && bottomLeftGrid = "O"):
+                print("player O wins")
+                break
+            elif (topCenterGrid && centerGrid && bottomCenterGrid = "X"):
+                print("player X wins")
+                break
+            elif (topCenterGrid && centerGrid && bottomCenterGrid = "O"):
+                print("player O wins")
+                break
+            elif (topRightGrid && centerRightGrid && bottomRightGrid = "X"):
+                print("player X wins")
+                break
+            elif (topRightGrid && centerRightGrid && bottomRightGrid = "O"):
+                print("player O wins")
+                break
+            elif (topLeftGrid && topCenterGrid && topRightGrid = "X"):
+                print("player X wins")
+                break
+            elif (topLeftGrid && topCenterGrid && topRightGrid = "O"):
+                print("player O wins")
+                break
+            elif (centerLeftGrid && centerGrid && centerRightGrid = "X"):
+                print("player X wins")
+                break
+            elif (centerLeftGrid && centerGrid && centerRightGrid = "O"):
+                print("player O wins")
+                break
+            
         #get user input
     x,y = eval(input("Please enter coordinates: "))
     neoX = x * 50 - 25
