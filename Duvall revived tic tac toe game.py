@@ -79,8 +79,9 @@ def drawGrid():
     
     
 #    #-------------------------initialize values-------------------------
-    String value
-    
+    def winconditions:
+        
+        
     
     #decide by random who goes first X or O
     
@@ -93,26 +94,61 @@ def drawGrid():
         drawGrid()
         #enlarge value or X and O and print fill in grid color with blue or 
         #red X or O
-        
+        while (numberOfturns <= 9):
+            #game vi
+            if (topLeftGrid && centerLeftGrid && bottomLeftGrid = "X"):
+                print("player X wins")
+                break
+            elif (topLeftGrid && centerLeftGrid && bottomLeftGrid = "O"):
+                print("player O wins")
+                break
+            elif (topCenterGrid && centerGrid && bottomCenterGrid = "X"):
+                print("player X wins")
+                break
+            elif (topCenterGrid && centerGrid && bottomCenterGrid = "O"):
+                print("player O wins")
+                break
+            elif (topRightGrid && centerRightGrid && bottomRightGrid = "X"):
+                print("player X wins")
+                break
+            elif (topRightGrid && centerRightGrid && bottomRightGrid = "O"):
+                print("player O wins")
+                break
+            elif (topLeftGrid && topCenterGrid && topRightGrid = "X"):
+                print("player X wins")
+                break
+            elif (topLeftGrid && topCenterGrid && topRightGrid = "O"):
+                print("player O wins")
+                break
+            elif (centerLeftGrid && centerGrid && centerRightGrid = "X"):
+                print("player X wins")
+                break
+            elif (centerLeftGrid && centerGrid && centerRightGrid = "O"):
+                print("player O wins")
+                break
+            elif (bottomLeftGrid && bottomCenterGrid && bottomRightGrid = "X"):
+                print("player X wins")
+                break
+            elif (bottomLeftGrid && bottomCenterGrid && bottomRightGrid = "O"):
+                print("player O wins")
+                break
+            elif (topLeftGrid && centerGrid && bottomRightGrid = "X"):
+                print("player X wins")
+                break
+            elif (topLeftGrid && centerGrid && bottomRightGrid = "O"):
+                print("player O wins")
+                break
+            elif ( topRightGrid && centerGrid && bottomLeftGrid = "X"):
+                print("player X wins")
+                break
+            elif ( topRightGrid && centerGrid && bottomLeftGrid = "O"):
+                print("player O wins")
+                break
+            else:
+                print("it is a draw")
+                break
         #get user input
-    x,y = eval(input("Please enter coordinates: "))
-    neoX = x * 50 - 25
-    neoY = y * 50 - 25
-    
-    ninja.goto(neoX,neoY)
-    ninja.write("2")
-    print("Please hit the enter key to continue: ")
-    ninja.left(180)
-    if neoX >= 100:
-        neoX = neoX - 100
-        ninja.goto(neoX,neoY)
-        ninja.write("2")
-        ninja.goto(0,0)
-    else:
-        neoX = neoX - 50
-        ninja.goto(neoX,neoY)
-        ninja.write("2")
-        ninja.goto(0,0)
+   
         
     
     # create X controls so that if grid is  filled you can not select it
