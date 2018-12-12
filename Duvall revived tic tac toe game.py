@@ -12,21 +12,16 @@ Created on Sat Dec  8 05:06:39 2018
 
 from turtle  import *
 
-def drawGrid():
-    
-    
-    
-    
-    
 #    #-------------------------initialize values-------------------------
  #create gamplay loop with win conditions
 def main():
         
     #drawGrid
     #initialize ninja turtle
-    #win = Screen()
+    win = Screen()
     ninja = Turtle()
     ninja.shape('turtle')
+    win.title('Duvall version of TIC TAC TOE GAME')
     
     
     # draw grid-------300 x 300 box
@@ -88,14 +83,36 @@ def main():
     #red X or O
     #int numberOfTurns = 0; 
     
-    #player X always goes first
-    print("player X always goes first")
-    value = "X";
-    print("Chose a grid for X")
-    ninja.onclick(ninja.goto())
-    ninja.write(value)
-    while (numberOfturns <= 9):
+    
+    x = 0
+    y = 0
+    numberOfTurns = 0
+    topLeftGrid = ""
+    topCenterGrid = ""
+    topRightGrid = ""
+    centerLeftGrid = ""
+    centerGrid = ""
+    centerRightGrid = ""
+    bottomLeftGrid = ""
+    bottomCenterGrid = ""
+    bottomRightGrid = ""
+    
+    
+    while (numberOfTurns <= 9):
+        #player X always goes first
+        print("player X always goes first")
+        value = "X";
+        print("Chose a grid for X")
+        
         numberOfTurns = numberOfTurns + 1;
+        x,y = ninja.onclick(ninja.goto(x),ninja.goto(y))
+    
+        if (x + 50 <= 150 & x - 50 >= -150) & (y + 50 <= 150 & y - 50 >= -150):
+            newX = x - x + 100
+            newY = y - y + 100
+            ninja.goto(newX,newY)
+            ninja.write(value)
+    
         # player "O" turn
         value = "O";
         #game victory conditions
