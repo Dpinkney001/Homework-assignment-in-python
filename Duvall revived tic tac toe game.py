@@ -107,6 +107,20 @@ def main():
         numberOfTurns = numberOfTurns + 1;
         x,y = ninja.onclick(ninja.goto(x),ninja.goto(y))
     
+        # if user click within the box of center left go to the center of 
+        # of the box and write value at the center
+        if ((x >= -100 & x <= -50) & (y >= -50 & y <= 50)):
+            ninja.goto(-100,0)
+            ninja.write("X")
+            centerLeftGrid = "X"
+            
+        # if user click within the box of Top left go to the top left of 
+        # of the box and write value at the center of the region
+        elif ((x >= -100 & x <= -50) & (y >= 50 & y <= 150)):
+            ninja.goto(-100,100)
+            ninja.write("X")
+            topLeftGrid = "X"
+            
         if (x + 50 <= 150 & x - 50 >= -150) & (y + 50 <= 150 & y - 50 >= -150):
             newX = x - x + 100
             newY = y - y + 100
